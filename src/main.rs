@@ -21,10 +21,12 @@ fn main() {
 
     let i2c_master = i2c_master_init(
         peripherals.i2c0,
-        // peripherals.pins.gpio21.into(), // sda
         // peripherals.pins.gpio22.into(), // scl
-        peripherals.pins.gpio9.into(),  // sda
+        // peripherals.pins.gpio21.into(), // sda
         peripherals.pins.gpio14.into(), // scl
+        peripherals.pins.gpio9.into(),  // sda
+        // peripherals.pins.gpio47.into(), // scl
+        // peripherals.pins.gpio48.into(), // sda
         100.kHz().into(),
     )
     .unwrap();
